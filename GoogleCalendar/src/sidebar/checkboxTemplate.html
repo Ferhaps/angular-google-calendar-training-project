@@ -1,0 +1,10 @@
+<div class="personRow" (click)="onClick()">
+  <div 
+    id="box"
+    [ngStyle]="{'border-color': color, 'background-color': colors[state]}">
+    <div style="color: white; font-weight: bold;">
+      {{values[state]}}
+    </div>
+  </div>
+  <span>{{name}}</span>
+</div>

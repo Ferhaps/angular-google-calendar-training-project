@@ -1,0 +1,32 @@
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Sun</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th *ngFor="let day of weekdays"
+        [ngClass]="{'today': checkForToday(day), 'notToday': !checkForToday(day)}">{{day}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hour of hoursOfTheDay">
+      <td style="color: darkgray;">{{hour}}</td>
+      <td *ngFor="let day of weekdays">
+        <div *ngFor="let event of viewEvents">
+          <div *ngIf="checkDate(day, event.date, event.starts, hour)"
+            [ngStyle]="{'color': event.color}">
+            {{event.text}}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

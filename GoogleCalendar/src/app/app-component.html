@@ -1,0 +1,5 @@
+<header (toggleSidebar)="sidebarShown = !sidebarShown"></header>
+<div style="display: flex;">
+  <sidebar *ngIf="sidebarShown" [data]="data"></sidebar>
+  <router-outlet></router-outlet>
+</div>

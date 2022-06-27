@@ -1,0 +1,12 @@
+<div id="container">
+  <div *ngFor="let obj of daysOfMonth; let i = index" 
+    [ngClass]="{'firstDate': i == 0, 'cell': true}">
+    <div *ngIf="obj.dayName" class="weekday">{{obj.dayName}}</div>
+    <div [ngClass]="{'currentDate': checkForToday(obj.day)}">{{obj.day}}</div>
+    <div *ngFor="let event of viewEvents">
+      <div *ngIf="checkDate(obj.day, event.date)" class="event" [ngStyle]="{'color': event.color}">
+        <div>• {{event.text}}</div>
+      </div>
+    </div>
+  </div>
+</div>

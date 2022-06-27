@@ -1,0 +1,29 @@
+table {
+  width: 1140px;
+  height: 360px;
+  background-color: white;
+}
+
+th, td {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  width: 60px;
+  height: 60px;
+}
+
+th:nth-child(1) {
+  border-left: 1px solid #ddd;
+}
+
+td:nth-child(1) {
+  border-left: 1px solid #ddd;
+}
+
+.today {
+  color: blue;
+}
+
+.notToday {
+  color: darkgray;
+}

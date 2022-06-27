@@ -1,0 +1,31 @@
+#container {
+  border: solid black 1px;
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+  width: 80px;
+  top: 50px;
+}
+
+#menu {
+  cursor: pointer;
+  padding: 8px;
+}
+
+#menu:hover {
+  background-color: #e6e6e6;
+}
+
+button {
+  background-color: white;
+  border: solid 0.5px darkgray;
+  border-radius: 5px;
+}
+
+#name {
+  text-align: right;
+}
+
+#shortcut {
+  text-align: left;
+}

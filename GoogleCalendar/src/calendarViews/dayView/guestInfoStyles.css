@@ -1,0 +1,97 @@
+#info {
+  position: absolute;
+  top: 250px;
+  left: 150px;
+  min-width: 340px;
+  max-width: 488px;
+  z-index: 10000000;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 12px 4px rgb(0 0 0 / 0.2);
+  padding-top: 20px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 5px;
+  margin-right: 500px;
+}
+
+#body {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-around;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+#name {
+  color: #202124;
+  font-family: 'Google Sans', "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+#email {
+  cursor: pointer;
+  text-decoration: none;
+  font: 400 13px/20px "Roboto",Helvetica,Arial,sans-serif;
+}
+
+#email:hover {
+  color: #1a73e8;
+  outline: none;
+}
+
+#addContact {
+  cursor: pointer;
+  color: #5f6368;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+#addContact:hover {
+  background-color: #e6e6e6;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 7px;
+  padding-bottom: 5px;
+}
+
+#openDt {
+  cursor: pointer;
+  padding: 9px;
+  border-radius: 5px;
+  background-color: #e8f0fe;
+  color: #1967d2;
+  font-family: 'Google Sans', "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: start;
+  text-transform: none;
+  vertical-align: top;
+}
+
+#openDt:hover {
+  color: #1559b7;
+}
+
+#footerIcons {
+  display: flex; 
+  align-items: center;
+}
+
+.footerBtn {
+  cursor: pointer;
+  fill: #1a73e8;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.footerBtn:hover {
+  background-color: #e6e6e6;
+}

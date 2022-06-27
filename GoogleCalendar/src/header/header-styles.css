@@ -1,0 +1,88 @@
+#header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #bfbfbf;
+  width: 100%;
+}
+
+#calendar {
+  margin-left: 7px;
+  font-family: 'Product Sans',Arial,sans-serif;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+#todayBtn {
+  font-family: "Google Sans","Roboto",Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 550;
+  letter-spacing: .25px;
+  text-transform: none;
+  opacity: 1;
+  color: #3c4043;
+  background-color: white;
+  border: darkgray solid 0.5px;
+  border-radius: 5px;
+  padding: 7px;
+  line-height: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+#todayBtn:hover {
+  background-color: #f2f2f2;
+}
+
+.navigateMonths {
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.navigateMonths:hover {
+  background-color: #f2f2f2;
+}
+
+#iconBar {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+}
+
+.headerIcon {
+  cursor: pointer;
+  color: #5f6368;
+  fill: #5f6368;
+  margin-right: 20px;
+  border-radius: 50%;
+  padding: 5px;
+  opacity: 1;
+}
+
+.headerIcon:hover {
+  background-color: #e6e6e6;
+}
+
+#infinno {
+  cursor: pointer;
+  display: flex; 
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 7px;
+  padding: 7px;
+  margin-right: 7px;
+}
+
+#infinno:hover {
+  background-color: #e8f1fd;
+}

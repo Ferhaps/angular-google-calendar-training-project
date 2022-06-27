@@ -1,0 +1,23 @@
+#container {
+  display: grid;
+  width: 1140px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.weekday {
+  margin: 15px;
+  text-align: center;
+}
+
+.cell {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  width: 90px;
+  height: 90px;
+}
+
+.currentDate {
+  color: blue;
+  font-weight: bold;
+}

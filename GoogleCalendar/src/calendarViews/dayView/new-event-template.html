@@ -1,0 +1,100 @@
+<div id="newEventForm">
+
+  <div id="header">
+    <div class="headerBtn" style="margin-right: auto; margin-left: 10px;">
+      <svg focusable="false" width="20" height="20" viewBox="0 0 24 24">
+        <path d="M20 9H4v2h16V9zM4 15h16v-2H4v2z"></path>
+      </svg>
+    </div>
+    <div class="headerBtn" style="margin-left: auto; margin-right: 10px;" (click)="close.emit()">
+      <svg focusable="false" width="20" height="20" viewBox="0 0 24 24">
+        <path
+          d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z">
+        </path>
+      </svg>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px; margin-left: 70px; margin-bottom: 25px;">
+    <div>
+      <input id="addTitle" placeholder="Add title">
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 460px;">
+      <div class="btn">Event</div>
+      <div class="btn">Out of office</div>
+      <div class="btn">Task</div>
+      <div class="btn">Reminder</div>
+      <div class="btn">Appointment slots</div>
+    </div>
+  </div>
+
+  <div class="bodyGroup">
+    <div>🕑</div>
+    <div class="secondaryGroup">
+      <div id="dateInfo">
+        <div>{{weekdays[date.getDay()]}}, {{months[date.getMonth()]}} {{date.getDate()}}</div>
+        <div style="margin-left: 15px;">{{hours.start}}{{hours.zone}} - {{hours.end}}{{hours.zone}}</div>
+      </div>
+      <div style="line-height: 16px; color: #70757a; font-size: 12px;">
+        Time zones . Does not repeat
+      </div>
+    </div>
+  </div>
+
+  <div id="findTime" class="bodyGroup">Find a time</div>
+
+  <div class="bodyGroup">
+    <div>
+      <svg focusable="false" width="20" height="20" viewBox="0 0 24 24">
+        <path
+          d="M15 8c0-1.42-.5-2.73-1.33-3.76.42-.14.86-.24 1.33-.24 2.21 0 4 1.79 4 4s-1.79 4-4 4c-.43 0-.84-.09-1.23-.21-.03-.01-.06-.02-.1-.03A5.98 5.98 0 0 0 15 8zm1.66 5.13C18.03 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.58-3.47-6.34-3.87zM9 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 9c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2M9 4c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 9c2.67 0 8 1.34 8 4v3H1v-3c0-2.66 5.33-4 8-4z">
+        </path>
+      </svg>
+    </div>
+    <div class="secondaryGroup">Add guests</div>
+  </div>
+
+  <div class="bodyGroup">
+    <div>
+      <img width="20" height="20" aria-hidden="true"
+        src="https://ssl.gstatic.com/calendar/images/conferenceproviders/logo_meet_2020q4_192px.svg">
+    </div>
+    <div class="secondaryGroup googleBtn">Add Google Meet video conferencing</div>
+  </div>
+
+  <div class="bodyGroup">
+    <div>
+      <svg focusable="false" width="24" height="24" viewBox="0 0 24 24">
+        <path
+          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z">
+        </path>
+        <circle cx="12" cy="9" r="2.5"></circle>
+      </svg>
+    </div>
+    <div class="secondaryGroup">Add location</div>
+  </div>
+
+  <div class="bodyGroup">
+    <div>
+      <img width="24" height="24"
+        src="https://www.lifepng.com/wp-content/uploads/2020/11/Hamburger-Menu-Icon-png-hd.png">
+    </div>
+    <div class="secondaryGroup">Add description or attachment</div>
+  </div>
+
+  <div class="bodyGroup">
+    <div style="margin-left: 5px;">📅</div>
+    <div class="secondaryGroup">
+      <div style="line-height: 20px; color: #3c4043; font-family: Roboto,Arial,sans-serif; font-weight: 400;">Ferhan
+        Cherkez</div>
+      <div style="line-height: 16px; color: #70757a; font-size: 12px;">Busy . Default visibility . Notify 10 minutes
+        before</div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="btn" style="margin-left: auto;">More options</div>
+    <div class="googleBtn" style="margin-right: 15px;">Save</div>
+  </div>
+
+</div>

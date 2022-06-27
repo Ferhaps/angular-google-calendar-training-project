@@ -1,0 +1,67 @@
+#toolbar {
+  background-color: white;
+  width: 250px;
+  height: fit-content;
+}
+
+#creatBtn {
+  box-shadow: 0px 0px 7px 1px rgb(0 0 0 / 20%);
+  display: flex;
+  border-radius: 48px;
+  align-items: center;
+  color: #222;
+  cursor: pointer;
+  width: fit-content;
+  background-color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+#create {
+  font-weight: 500;
+  color: #3c4043;
+  font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+  letter-spacing: .25px;
+  padding: 0 18px 0 14px;
+}
+
+#meetWithBox {
+  display: flex;
+  flex-direction: column;
+  margin-left: 11px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+#meetWith {
+  color: #3c4043;
+  font-family: "Google Sans", "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  line-height: 20px;
+}
+
+#inputMeetWith {
+  margin-top: 5px;
+  width: 150px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f1f3f4;
+}
+
+#calendars {
+  margin-left: 11px;
+  margin-bottom: 15px;
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  line-height: 20px;
+  color: #3c4043;
+  text-transform: none;
+}

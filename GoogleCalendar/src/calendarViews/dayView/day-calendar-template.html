@@ -1,0 +1,42 @@
+<div id="dayView">
+  <event-editor 
+    *ngIf="editorShown" 
+    [eventInfo]="eventObj" 
+    (close)="onEditorClose()">
+  </event-editor>
+  <div id="line"></div>
+  <div id="header">
+    <div 
+      [ngClass]="{'today': checkForToday(currentDate.getDate()), 'notToday': !checkForToday(currentDate.getDate())}">
+      {{weekdays[currentDate.getDay()]}}
+    </div>
+    <div 
+      style="display: flex;"
+      [ngClass]="{'today': checkForToday(currentDate.getDate()), 'notToday': !checkForToday(currentDate.getDate())}">
+      <span [ngClass]="{'ball': checkForToday(currentDate.getDate())}">{{currentDate.getDate()}}</span>
+    </div>
+  </div>
+  <new-event-form 
+    *ngIf="newEventFormShown" 
+    [date]="currentDate" 
+    [hours]="newEventHours" 
+    (close)="newEventFormShown = false">
+  </new-event-form>
+  <div id="dayViewBody">
+    <div></div>
+    <div *ngFor="let hour of hoursOfTheDay;" class="row" (click)="onRowClick(hour)">
+      <div class="hour">{{hour}}</div>
+      <div class="rowLine"></div>
+    </div>
+    <div *ngFor="let event of viewEvents; let i = index;" id="{{i}}" (mousedown)="onMousedown($event)" [ngStyle]="{
+        'backgroundColor': event.color,
+        'height': event.height,
+        'z-index': event.zIndex,
+        'top': event.top,
+        'left': event.left
+        }" class="event">
+      <div style="margin-top: 8px;" class="eventText">{{event.text}}</div>
+      <div class="eventText">{{formatTime(event.starts, event.ends, event.zone)}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<button id="menu" (click)="container.hidden = !container.hidden">
+  {{buttonView}} ⏷
+  <div id="container" [hidden]="true" #container>
+    <div *ngFor="let item of items">
+      <span id="name" 
+        [routerLink]="[item.path]" 
+        (click)="buttonView = item.name">{{item.name}}
+      </span>
+      &nbsp;
+      <span id="shortcut" 
+        [routerLink]="[item.path]" 
+        (click)="buttonView = item.name">{{item.shortcut}}
+      </span>
+    </div>
+  </div>
+</button>

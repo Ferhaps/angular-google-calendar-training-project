@@ -1,0 +1,127 @@
+#newEventForm {
+  z-index: 1000;
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  background-color: white;
+  box-shadow: 0px 0px 12px 4px rgb(0 0 0 / 0.2);
+  border-radius: 8px;
+}
+
+#header {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #f1f3f4;
+  box-shadow: inset 0 1px 0 #fff;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  width: 550px;
+}
+
+.headerBtn {
+  color: #5f6368;
+  fill: #5f6368;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.headerBtn:hover {
+  background-color: #e6e6e6;
+}
+
+#addTitle {
+  color: #70757a;
+  font-family: "Google Sans", "Roboto", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 24px;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+  width: 455px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  font-family: "Google Sans", "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  line-height: 36px;
+  color: #5f6368;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d1e2fa;
+  color: #1967d2;
+}
+
+.bodyGroup {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: "Roboto",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #70757a;
+}
+
+.secondaryGroup {
+  margin-left: 28px;
+}
+
+#dateInfo {
+  display: flex;
+  line-height: 20px;
+  color: #3c4043;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#findTime {
+  margin-left: 62px;
+  font-family: "Google Sans", "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  line-height: 36px;
+  color: #1967d2;
+  width: fit-content;
+  padding: 1px 5px;
+  cursor: pointer;
+}
+
+#findTime:hover {
+  background-color: #e6e6e6;
+}
+
+.googleBtn {
+  cursor: pointer;
+  margin-left: 20px;
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 0 16px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.googleBtn:hover {
+  background-color: #458eed;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}

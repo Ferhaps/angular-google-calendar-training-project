@@ -1,0 +1,141 @@
+<div id="editor">
+
+  <div id="header">
+    <div style="margin-left: auto;">
+      <span class="headerBtn">
+        <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M20.41 4.94l-1.35-1.35c-.78-.78-2.05-.78-2.83 0L3 16.82V21h4.18L20.41 7.77c.79-.78.79-2.05 0-2.83zm-14 14.12L5 19v-1.36l9.82-9.82 1.41 1.41-9.82 9.83z"></path></svg>
+      </span>
+      <span class="headerBtn">
+        <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M15 4V3H9v1H4v2h1v13c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V6h1V4h-5zm2 15H7V6h10v13z"></path><path d="M9 8h2v9H9zm4 0h2v9h-2z"></path></svg>
+      </span>
+      <span class="headerBtn">
+        <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+      </span>
+      <span class="headerBtn" (click)="close.emit()">
+        <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+      </span>
+    </div>
+  </div>
+
+  <div id="mainArea">
+
+    <div>
+      <div style="display: flex;">
+        <div [ngStyle]="{
+          'backgroundColor': eventInfo.color, 
+          'width': '15px', 
+          'height': '15px', 
+          'border-radius': '5px',
+          'margin-top': '8px'
+        }"></div>
+        <div style="font-size: 28px; margin-left: 25px; color: #3c4043;">{{eventInfo.text}}</div>
+      </div>
+      <div style="margin-left: 42px; font-size: 15px; color: #3c4043;">{{formatInfo()}}</div>
+    </div>
+
+    <div style="margin-top: 35px;">
+      <div style="display: flex;">
+        <img style="margin-top: 9px;" width="20px" height="20px" src="https://ssl.gstatic.com/calendar/images/conferenceproviders/logo_meet_2020q4_192px.svg">
+        <div id="meetBtn">Join with Google Meet</div>
+      </div>
+      <div id="meetLink">meet.google.com/ala-bala</div>
+    </div>
+
+    <div style="margin-top: 35px; display: flex;">
+      <div style="margin-top: 10px;">
+        <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M16.01 14.46l-2.62 2.62a16.141 16.141 0 0 1-6.5-6.5l2.62-2.62a.98.98 0 0 0 .27-.9L9.13 3.8c-.09-.46-.5-.8-.98-.8H4c-.56 0-1.03.47-1 1.03a17.92 17.92 0 0 0 2.43 8.01 18.08 18.08 0 0 0 6.5 6.5 17.92 17.92 0 0 0 8.01 2.43c.56.03 1.03-.44 1.03-1v-4.15c0-.48-.34-.89-.8-.98l-3.26-.65a.99.99 0 0 0-.9.27z"></path></svg>
+      </div>
+      <div style="margin-left: 25px;">
+        <div id="joinByPhoneBtn">Join by phone</div>
+        <div id="phoneNumber" style="color: #3c4043;">(US) +1 917-336-7348 PIN: 553 393 702#</div>
+      </div>
+    </div>
+
+    <div>
+      <div style="margin-top: 35px; display: flex; align-items: center;">
+        <div>
+          <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M15 8c0-1.42-.5-2.73-1.33-3.76.42-.14.86-.24 1.33-.24 2.21 0 4 1.79 4 4s-1.79 4-4 4c-.43 0-.84-.09-1.23-.21-.03-.01-.06-.02-.1-.03A5.98 5.98 0 0 0 15 8zm1.66 5.13C18.03 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.58-3.47-6.34-3.87zM9 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 9c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2M9 4c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 9c2.67 0 8 1.34 8 4v3H1v-3c0-2.66 5.33-4 8-4z"></path></svg>
+        </div>
+        <div>
+          <div style="margin-left: 25px; color: #3c4043;">{{eventInfo.guests.length}} guests</div>
+          <div id="guestInfo">{{getGuestInfo()}}</div>
+        </div>
+        <div style="margin-left: auto; margin-right: 15px;">
+          <span class="headerBtn">
+            <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H4V4h16v12z"></path></svg>
+          </span>
+          <span class="headerBtn">
+            <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 10.8 4.8 6h14.4zM4 18V7.87l8 5.33 8-5.33V18H4z"></path></svg>
+          </span>
+        </div>
+      </div>
+      <div *ngFor="let person of eventInfo.guests let i = index;" class="personRow">
+        <img width="25" height="25" style="border-radius: 50%;" src="{{person.imgUrl}}">
+        <span 
+          *ngIf="person.going"
+          class="tick"
+          [ngStyle]="{
+            'top': 370 + 35 * i + 'px'
+          }">
+          <svg xmlns="https://www.w3.org/2000/svg" width="14" height="14"><path fill="#CEEAD6" d="M7 0c3.87 0 7 3.13 7 7s-3.13 7-7 7-7-3.13-7-7 3.13-7 7-7z"></path><path fill="none" stroke="#137333" stroke-width="1.5" d="M3.5 6.5L6 9l5-5"></path></svg>
+        </span>
+        <span 
+          *ngIf="person.going == false"
+          class="tick"
+          [ngStyle]="{
+            'top': 370 + 35 * i + 'px'
+          }">
+          <svg xmlns="https://www.w3.org/2000/svg" width="14" height="14"><path fill="#FAD2CF" d="M7 0c3.87 0 7 3.13 7 7s-3.13 7-7 7-7-3.13-7-7 3.13-7 7-7z"></path><path fill="none" stroke="#B31412" stroke-width="1.5" d="M4 10l6-6M10 10L4 4"></path></svg>
+        </span>
+        <div style="margin-left: 8px;">
+          <div 
+            (mouseenter)="onMouseEnter(person)">
+            {{person.name}}
+          </div>
+          <div class="guestStatus">{{person.status}}</div>
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 10px;">
+        <div>
+          <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M18 17v-6c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v6H4v2h16v-2h-2zm-2 0H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zm-4 5c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z"></path></svg>
+        </div>
+        <div style="margin-left: 23px; color: #3c4043;">10 minutes before</div>
+      </div>
+      <div style="margin-top: 5px;">
+        <span>📅</span>
+        <span style="margin-left: 23px; color: #3c4043;">{{eventOrganizer}}</span>
+      </div>
+    </div>
+
+    <guestInfo 
+      *ngIf="infoComponentShown" 
+      [personInfo]="personInfo"
+      (mouseleave)="onMouseLeave()">
+    </guestInfo>
+
+  </div>
+
+  <div style="display: flex; flex-direction: column;">
+    <div class="footer">
+      <div style="display: flex; margin-left: 15px;">
+        <div style="margin-top: 5px;">Going ?</div>
+        <div style="display: flex; margin-left: auto;">
+          <div class="footerBtn" style="display: flex; color: #1a73e8; background-color: #e8f0fe; border: none;">
+            <div style="margin-right: 3px;">Yes</div>
+            <div><svg focusable="false" width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"></path></svg></div>
+          </div>
+          <div class="footerBtn">No</div>
+          <div class="footerBtn">Maybe</div>
+          <div style="border-right: 1px solid #e6e6e6;; margin-right: 5px;"></div>
+          <div *ngIf="!footerSectionShown" class="footerBtn" style="border: none;" (click)="footerSectionShown = true">
+            <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M17.29 15.71L12 10.41l-5.29 5.3-1.42-1.42L12 7.59l6.71 6.7z"></path></svg>
+          </div>
+          <div *ngIf="footerSectionShown" class="footerBtn" style="border: none; transform: rotate(180deg);" (click)="footerSectionShown = false">
+            <svg focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M17.29 15.71L12 10.41l-5.29 5.3-1.42-1.42L12 7.59l6.71 6.7z"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

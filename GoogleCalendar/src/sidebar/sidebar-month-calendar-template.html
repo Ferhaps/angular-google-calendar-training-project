@@ -1,0 +1,6 @@
+<div id="container">
+  <div *ngFor="let obj of daysOfMonth; let i = index;" class="cell">
+    <div *ngIf="obj.dayName" class="weekday">{{obj.dayName}}</div>
+    <div [ngClass]="{'currentDate': checkForToday(obj.day)}">{{obj.day}}</div>
+  </div>
+</div>

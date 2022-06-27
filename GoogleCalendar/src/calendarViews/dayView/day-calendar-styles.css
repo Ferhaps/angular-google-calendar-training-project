@@ -1,0 +1,112 @@
+#dayView {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#line {
+  position: absolute;
+  border-right: 2px solid #d9d9d9;
+  top: 70px;
+  left: 40px;
+  height: 700px;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1050px;
+  font-variant: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  font-weight: 500;
+}
+
+.today:first-child {
+  color: #1a73e8;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-indent: 0.8px;
+}
+
+.ball {
+  color: white;
+  background-color: #1a73e8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 100%;
+}
+
+.notToday:first-child {
+  line-height: 32px;
+  color: #70757a;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-indent: 0.8px;
+}
+
+.notToday:nth-child(2) {
+  color: black;
+}
+
+#dayViewBody{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  height: 700px;
+  width: 1200px;
+}
+
+#dayViewBody::-webkit-scrollbar-track {
+  background: none;
+}
+
+#dayViewBody::-webkit-scrollbar {
+  width: 7px;
+}
+
+#dayViewBody::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 49px;
+}
+
+.hour {
+  position: absolute;
+  color: #70757a;
+  font-size: 10px;
+}
+
+.rowLine {
+  margin-left: 30px;
+  width: 100%;
+  border-top: 1px solid #d9d9d9;
+}
+
+.event {
+  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding-left: 8px;
+  position: absolute;
+  width: 95%;
+}
+
+.eventText {
+  width: fit-content;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .1px;
+  line-height: 15px;
+}
